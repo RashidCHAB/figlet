@@ -1,12 +1,10 @@
-import os from 'os'
+import figlet from 'figlet'
 
-
-
-console.log(os.homedir())
-console.log(os.hostname())
-console.log(os.version())
-console.log(os.type())
-
-import vers from './welcome.js'
-
-console.log(vers())
+figlet('Intocode', function(err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    }
+    console.log(data)
+});
